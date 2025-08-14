@@ -43,8 +43,8 @@
       <!-- ----------------------------------------------------------------------- -->
       <!--                                 INCOME                                  -->
       <!-- ----------------------------------------------------------------------- -->
-       
-      <form action="" id="ekleFormu" class="w-75">
+
+      <form action="" id="addForm" class="w-75">
         <div
           class="income bg-success-subtle p-1 flex-column align-items-center justify-content-center rounded-3 m-2"
         >
@@ -55,13 +55,13 @@
             <input
               type="text"
               class="form-control w-50 p-2"
-              id="gelirInput"
+              id="incomeInput"
               placeholder="Enter your income"
             />
 
             <button
               type="submit"
-              id="ekle"
+              id="add"
               class="btn btn-danger w-25 h-50 p-2 m-1"
             >
               ADD
@@ -73,7 +73,7 @@
       <!-- ----------------------------------------------------------------------- -->
       <!--                                EXPENSES                                 -->
       <!-- ----------------------------------------------------------------------- -->
-      <form action="" id="harcama-formu" class="w-75">
+      <form action="" id="expenses-form" class="w-75">
         <div
           class="income bg-warning-subtle flex-column align-items-center justify-content-center rounded-3 py-4 border border-1 my-2"
         >
@@ -85,12 +85,12 @@
           >
             <div class="d-flex align-items-center justify-content-center w-75">
               <div class="form-floating my-3 me-1 w-100">
-                <input type="date" class="form-control" id="tarih" />
+                <input type="date" class="form-control" id="date" />
                 <label for="floatingInput">Enter Date</label>
               </div>
 
               <div class="form-floating my-3 me-1 w-100">
-                <input type="number" class="form-control" id="miktar" />
+                <input type="number" class="form-control" id="quantity" />
                 <label for="floatingInput">Amount</label>
               </div>
             </div>
@@ -98,7 +98,7 @@
               class="d-flex align-items-center justify-content-center flex-column w-75"
             >
               <div class="form-floating my-2 w-100">
-                <input type="text" class="form-control" id="harcamaAlani" />
+                <input type="text" class="form-control" id="place of expenses" />
                 <label for="floatingInput">Expenses,Bills </label>
               </div>
               <div class="w-100 d-flex">
@@ -128,7 +128,7 @@
               <th scope="col">Process</th>
             </tr>
           </thead>
-          <tbody id="harcamaTablosu">
+          <tbody id="expensesTable">
             <!-- <tr>
               <th scope="row">1</th>
               <td>Mark</td>
@@ -148,15 +148,15 @@
           <tbody class="table-group-divider">
             <tr>
               <th scope="row" class="w-25">Income:</th>
-              <td id="gelirGoster"></td>
+              <td id="showIncome"></td>
             </tr>
             <tr>
               <th scope="row" class="w-25">Expense:</th>
-              <td id="harcamaGoster"></td>
+              <td id="showExpenses"></td>
             </tr>
             <tr>
               <th scope="row" class="w-25">Your money:</th>
-              <td id="kalanGoster"></td>
+              <td id="showMoney"></td>
             </tr>
           </tbody>
         </table>
@@ -170,7 +170,7 @@
     <div
       class="container bg-warning-subtle w-50 border border-1 text-center mt-3"
     >
-      <button id="temizle" class="btn btn-danger w-75 p-2 m-2">
+      <button id="clearIt" class="btn btn-danger w-75 p-2 m-2">
         CLEAR ALL
       </button>
     </div>
