@@ -8,11 +8,11 @@ Track your income, expenses, and balance in real time — all stored locally in 
 
 ##  Features
 
-- ➕ Add and remove transactions  
-- 📊 Real-time balance updates  
-- 💾 Data persistence with LocalStorage (works offline)  
-- 📱 Responsive design for mobile and desktop  
-- 🎯 Minimal, user-friendly interface
+- ➕ Add and remove transactions
+- Real-time balance updates  
+- Data persistence with LocalStorage (works offline)  
+- Responsive design for mobile and desktop  
+- Minimal, user-friendly interface
 
 ---
 
@@ -28,7 +28,7 @@ Track your income, expenses, and balance in real time — all stored locally in 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/paypocket.git
+   git clone https://github.com/imrenr/paypocket.git
 
 ## Project Structure
 
