@@ -8,11 +8,11 @@ Track your income, expenses, and balance in real time — all stored locally in 
 
 ##  Features
 
-- ➕ Add and remove transactions  
-   Real-time balance updates  
+- ➕ Add and remove transactions
+- Real-time balance updates  
 - Data persistence with LocalStorage (works offline)  
 - Responsive design for mobile and desktop  
--  Minimal, user-friendly interface
+- Minimal, user-friendly interface
 
 ---
 
