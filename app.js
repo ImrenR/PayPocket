@@ -14,9 +14,27 @@ addForm.addEventListener("submit", (e) => {
   localStorage.setItem("income", incomes);
 });
 
-
 // ! To able to see and store your incomes:
 // const seeIncomes =localStorage.getItem(incomes)
 // console.log(seeIncomes)
 
-//! ******************************************************** */
+//! ********************** EXPENSES FORM ************************* */
+
+const date = document.querySelector("#date");
+const quantity = document.querySelector("#quantity");
+const placeOfExpences = document.querySelector("#placeOfExpences");
+const expensesForm = document.querySelector("#expensesForm");
+let listOfExpenses = JSON.parse(localStorage.getItem("expense")) ||[];
+
+expensesForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const newExpenses = {
+    quantity: Number(quantity.value),
+    date: date.value,
+    information: placeOfExpences.value,
+    id: new Date().getTime(),
+  };
+  listOfExpenses.push(newExpenses)
+  localStorage.setItem("expense", JSON.stringify(listOfExpenses));
+});
+const listOfExpences =JSON.parse(localStorage.getItem("expense"))
