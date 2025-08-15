@@ -9,7 +9,7 @@ let incomes = JSON.parse(localStorage.getItem("incomes")) || 0;
 addForm.addEventListener("submit", (e) => {
   e.preventDefault();
   incomes = incomes + Number(incomeInput.value);
-  showIncome = incomes.textContent;
+  incomes = showIncome.textContent
   console.log(incomes);
   localStorage.setItem("income", incomes);
 });
