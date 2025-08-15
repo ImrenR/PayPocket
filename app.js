@@ -5,6 +5,6 @@ let income = 0;
 
 addForm.addEventListener("submit", (e)=>{
   e.preventDefault()
-  income = incomeInput.value
+  income = Number(incomeInput.value)
 
 })
