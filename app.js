@@ -3,7 +3,7 @@
 const incomeInput = document.querySelector("#incomeInput")
 const added = document.querySelector("#added")
 const addForm = document.querySelector("#addForm")
-let incomes = 0;
+let incomes = JSON.parse(localStorage.getItem('incomes')) || 0
 
 addForm.addEventListener("submit", (e)=>{
   e.preventDefault()
