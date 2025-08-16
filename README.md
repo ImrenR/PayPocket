@@ -4,8 +4,11 @@ A simple, browser-based wallet app built with **HTML**, **CSS**, and **pure Java
 Track your income, expenses, and balance in real time — all stored locally in your browser.
 
 ---
+## Demo
 
+https://github.com/user-attachments/assets/1414a5f5-d437-4b27-9762-8a7aff8cbcd9
 
+---
 ##  Features
 
 - ➕ Add and remove transactions
