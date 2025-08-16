@@ -94,8 +94,9 @@ clearIt.addEventListener("click", () => {
   incomeInput.value = "";
   listOfExpenses = [];
   incomes = 0;
-  expencesTable.innerHTML = "";
-  hesaplaGoster();
+  expencesOfTable.innerHTML = "";
+  
   localStorage.removeItem("expense");
   localStorage.removeItem("myIncomes");
+  hesaplaGoster();
 });
