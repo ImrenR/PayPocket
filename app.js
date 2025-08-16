@@ -38,6 +38,7 @@ expensesForm.addEventListener("submit", (e) => {
   };
   listOfExpenses.push(newExpenses);
   localStorage.setItem("expense", JSON.stringify(listOfExpenses));
+    expencesOfTable(newExpenses)
 });
 
 listOfExpenses.forEach((expenses) => {
@@ -55,14 +56,15 @@ function expencesOfTable({ id, quantity, date, information }) {
               <td>${quantity}</td>
               <td>${date}</td>
               <td> <i class="fa-solid fa-trash-can text-danger ms-4"
-              style = "cursor:pointer" id="delete"> </td>
+              style = "cursor:pointer" id=${id}> </td>
             </tr> 
             `;
 
-  document.querySelectorAll("#delete").forEach((item) => {
+  document.querySelectorAll(".fa-trash-can").forEach((item) => {
      item.onclick=()=>{
       item.parentElement.parentElement.remove()
       listOfExpenses = listOfExpenses.filter((items)=> items.id != item.id)
+      localStorage.setItem("expense", JSON.stringify(listOfExpenses));
      }
   });
 }
