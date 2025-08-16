@@ -37,4 +37,7 @@ expensesForm.addEventListener("submit", (e) => {
   listOfExpenses.push(newExpenses)
   localStorage.setItem("expense", JSON.stringify(listOfExpenses));
 });
+
 const listOfExpences =JSON.parse(localStorage.getItem("expense"))
+
+//! ********************************************************************************/
