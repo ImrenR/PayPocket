@@ -52,8 +52,8 @@ function expencesOfTable({id,quantity,date,information}) {
   expensesTable.innerHTML += `
   <tr>
               <th scope="row">${information}</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>${quantity}</td>
+              <td>${date}</td>
+              <td> <i class="fa-solid fa-trash-can text-danger ms-4"</td>
             </tr> `
 }
