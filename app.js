@@ -41,19 +41,28 @@ expensesForm.addEventListener("submit", (e) => {
 });
 
 listOfExpenses.forEach((expenses) => {
-  expencesOfTable(expenses)
+  expencesOfTable(expenses);
 });
 
 //! ****************PRINTING THE VALUES ON THE TABLE**********************************************************/
 
 // if you need to update the values all the time you need to use functions!
 
-function expencesOfTable({id,quantity,date,information}) {
+function expencesOfTable({ id, quantity, date, information }) {
   expensesTable.innerHTML += `
   <tr>
               <th scope="row">${information}</th>
               <td>${quantity}</td>
               <td>${date}</td>
-              <td> <i class="fa-solid fa-trash-can text-danger ms-4"</td>
-            </tr> `
+              <td> <i class="fa-solid fa-trash-can text-danger ms-4"
+              style = "cursor:pointer" id="delete"> </td>
+            </tr> 
+            `;
+
+  document.querySelectorAll("#delete").forEach((item) => {
+     item.onclick=()=>{
+      item.parentElement.parentElement.remove()
+      listOfExpenses = listOfExpenses.filter((items)=> items.id != item.id)
+     }
+  });
 }
