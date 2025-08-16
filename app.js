@@ -24,7 +24,9 @@ const date = document.querySelector("#date");
 const quantity = document.querySelector("#quantity");
 const placeOfExpences = document.querySelector("#placeOfExpences");
 const expensesForm = document.querySelector("#expensesForm");
-let listOfExpenses = JSON.parse(localStorage.getItem("expense")) ||[];
+const expensesTable = document.querySelector("#expensesTable");
+
+let listOfExpenses = JSON.parse(localStorage.getItem("expense")) || [];
 
 expensesForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -34,10 +36,24 @@ expensesForm.addEventListener("submit", (e) => {
     information: placeOfExpences.value,
     id: new Date().getTime(),
   };
-  listOfExpenses.push(newExpenses)
+  listOfExpenses.push(newExpenses);
   localStorage.setItem("expense", JSON.stringify(listOfExpenses));
 });
 
-const listOfExpences =JSON.parse(localStorage.getItem("expense"))
+listOfExpenses.forEach((expenses) => {
+  expencesOfTable(expenses)
+});
 
-//! ********************************************************************************/
+//! ****************PRINTING THE VALUES ON THE TABLE**********************************************************/
+
+// if you need to update the values all the time you need to use functions!
+
+function expencesOfTable({id,quantity,date,information}) {
+  expensesTable.innerHTML += `
+  <tr>
+              <th scope="row">${information}</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr> `
+}
