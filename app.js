@@ -4,7 +4,7 @@ const incomeInput = document.querySelector("#incomeInput");
 const added = document.querySelector("#added");
 const addForm = document.querySelector("#addForm");
 const showIncome = document.querySelector("#showIncome");
-let incomes = JSON.parse(localStorage.getItem("incomes")) || 0; // to get number not a string to avoid such as 20002000
+let incomes = JSON.parse(localStorage.getItem("incomes")) || 0; // to avoid strings we used Parse: such as 20002000 will be with parse 2000
 // JSON parse : we use this to not have string value
 
 addForm.addEventListener("submit", (e) => {
